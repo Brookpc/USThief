@@ -35,7 +35,7 @@ category = Category.THIEVING,
 description = "Steals from stalls, Depending on level, and sells for profit!",
 name = "UThief by Ark",
 servers = { "Ultimate Scape" },
-version = 2.2)
+version = 2.5)
 
 public class Main extends Script implements Paintable {
 
@@ -62,7 +62,9 @@ public class Main extends Script implements Paintable {
 	//GUI
 	Gui x = new Gui();
 	public boolean guiWait = true;
+	
 	/***************************************************************************************************************************************/
+	
 	public boolean onExecute() {
 		x.setVisible(true);
 		while (x.isRunning && guiWait) {
@@ -155,8 +157,8 @@ public class Main extends Script implements Paintable {
 		@SuppressWarnings({ "rawtypes", "unchecked" })
 		public Gui() {
 			setTitle("USThiever by Ark");
-			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			setBounds(100, 100, 315, 177);
+			setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			setBounds(100, 100, 248, 167);
 			contentPane = new JPanel();
 			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 			setContentPane(contentPane);
